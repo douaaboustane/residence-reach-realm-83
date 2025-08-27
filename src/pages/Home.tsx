@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="flex justify-center mb-8">
               <div className="h-16 w-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/30 hover-scale">
-                <img src="/lovable-uploads/87236b74-c272-44b3-b146-c550d4ae17f1.png" alt="Company Logo" className="h-10 w-10" />
+                <Building2 className="h-8 w-8 text-white" />
               </div>
             </div>
             
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
               <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm hover-scale">
                 <Link to="/investigations" className="flex items-center space-x-2">
                   <Shield className="h-4 w-4" />
-                  <span className="text-gray-950">{t('home.hero.ctaInvestigator')}</span>
+                  <span>{t('home.hero.ctaInvestigator')}</span>
                 </Link>
               </Button>
               
