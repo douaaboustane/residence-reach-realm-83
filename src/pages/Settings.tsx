@@ -199,9 +199,9 @@ const Settings: React.FC = () => {
                 <Label>Language</Label>
                 <Select value={i18n.language} onValueChange={changeLanguage}>
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select language" />
+                    <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-popover border border-border z-50">
+                  <SelectContent>
                     <SelectItem value="en">English</SelectItem>
                     <SelectItem value="fr">Français</SelectItem>
                     <SelectItem value="ar">العربية</SelectItem>

@@ -80,11 +80,11 @@ const Investigations: React.FC = () => {
     if (!property) return null;
 
     return (
-      <Card className="group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hover:border-primary/20 animate-fade-in">
+      <Card className="hover:shadow-md transition-shadow">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
-            <CardTitle className="text-lg group-hover:text-primary transition-colors duration-200">{property.title}</CardTitle>
-            <Badge variant={getStatusColor(investigation.status) as any} className="animate-scale-in">
+            <CardTitle className="text-lg">{property.title}</CardTitle>
+            <Badge variant={getStatusColor(investigation.status) as any}>
               <div className="flex items-center space-x-1">
                 {getStatusIcon(investigation.status)}
                 <span className="capitalize">{investigation.status}</span>
@@ -137,14 +137,13 @@ const Investigations: React.FC = () => {
             </div>
           )}
           
-          <div className="flex space-x-2 pt-2">
+          <div className="flex space-x-2">
             {investigation.status === 'pending' && (
               <Button 
                 size="sm" 
                 onClick={() => handleStartInvestigation(investigation)}
-                className="flex-1 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl bg-gradient-to-r from-primary to-primary-glow"
+                className="flex-1"
               >
-                <Search className="h-4 w-4 mr-2 animate-pulse" />
                 {t('investigator.startInvestigation')}
               </Button>
             )}
@@ -153,9 +152,8 @@ const Investigations: React.FC = () => {
               <Button 
                 size="sm" 
                 onClick={() => handleCompleteInvestigation(investigation)}
-                className="flex-1 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl bg-gradient-to-r from-success to-teal-500"
+                className="flex-1"
               >
-                <CheckCircle className="h-4 w-4 mr-2" />
                 {t('investigator.completeInvestigation')}
               </Button>
             )}
@@ -165,7 +163,7 @@ const Investigations: React.FC = () => {
                 variant="outline" 
                 size="sm" 
                 onClick={() => setSelectedInvestigation(investigation)}
-                className="flex-1 hover:scale-105 transition-all duration-200 border-2 hover:border-primary hover:bg-primary/5"
+                className="flex-1"
               >
                 <FileText className="h-4 w-4 mr-2" />
                 View Report
@@ -262,42 +260,42 @@ const Investigations: React.FC = () => {
       
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in">
+        <Card>
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center hover:scale-110 transition-transform duration-200">
-                <Clock className="h-6 w-6 text-primary animate-pulse" />
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Clock className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary">{pendingInvestigations.length}</div>
+                <div className="text-2xl font-bold">{pendingInvestigations.length}</div>
                 <div className="text-sm text-muted-foreground">Pending Investigations</div>
               </div>
             </div>
           </CardContent>
         </Card>
         
-        <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in [animation-delay:0.1s]">
+        <Card>
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-success/20 to-success/10 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <div className="h-12 w-12 rounded-lg bg-success/10 flex items-center justify-center">
                 <CheckCircle className="h-6 w-6 text-success" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-success">{completedInvestigations.length}</div>
+                <div className="text-2xl font-bold">{completedInvestigations.length}</div>
                 <div className="text-sm text-muted-foreground">Completed</div>
               </div>
             </div>
           </CardContent>
         </Card>
         
-        <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in [animation-delay:0.2s]">
+        <Card>
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
-              <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center hover:scale-110 transition-transform duration-200">
+              <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center">
                 <Star className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-accent">
+                <div className="text-2xl font-bold">
                   {completedInvestigations.length > 0 
                     ? Math.round(completedInvestigations.reduce((acc, inv) => acc + inv.score, 0) / completedInvestigations.length)
                     : 0}%

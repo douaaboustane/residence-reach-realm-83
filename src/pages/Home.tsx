@@ -5,39 +5,28 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Building2, Shield, BarChart3, ArrowRight, CheckCircle, Users, Globe } from 'lucide-react';
 import heroImage from '@/assets/hero-home.jpg';
-import dynamicHeroImage from '@/assets/dynamic-hero-bg.jpg';
 import verificationImage from '@/assets/verification-hero.jpg';
+
 const Home: React.FC = () => {
-  const {
-    t
-  } = useTranslation();
-  const [currentBg, setCurrentBg] = React.useState(0);
-  const backgrounds = [dynamicHeroImage, heroImage];
+  const { t } = useTranslation();
 
-  // Auto-rotate background images
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBg(prev => (prev + 1) % backgrounds.length);
-    }, 8000); // Change every 8 seconds
-
-    return () => clearInterval(interval);
-  }, [backgrounds.length]);
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          {backgrounds.map((bg, index) => (
-            <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentBg ? 'opacity-100' : 'opacity-0'}`}>
-              <img src={bg} alt="Luxury real estate background" className="w-full h-full object-cover animate-fade-in" />
-            </div>
-          ))}
+          <img 
+            src={heroImage} 
+            alt="Modern luxury home exterior" 
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-accent/80" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-8">
-              <div className="h-16 w-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/30 hover-scale">
+              <div className="h-16 w-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/30">
                 <Building2 className="h-8 w-8 text-white" />
               </div>
             </div>
@@ -51,24 +40,17 @@ const Home: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover-scale">
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg">
                 <Link to="/properties" className="flex items-center space-x-2">
                   <span>{t('home.hero.ctaBuyer')}</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               
-              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm hover-scale">
+              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
                 <Link to="/investigations" className="flex items-center space-x-2">
                   <Shield className="h-4 w-4" />
                   <span>{t('home.hero.ctaInvestigator')}</span>
-                </Link>
-              </Button>
-              
-              <Button asChild variant="secondary" size="lg" className="hover-scale">
-                <Link to="/estimate" className="flex items-center space-x-2">
-                  <BarChart3 className="h-4 w-4" />
-                  <span>Get Estimate</span>
                 </Link>
               </Button>
             </div>
@@ -172,11 +154,15 @@ const Home: React.FC = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Link to="/properties">Browse Properties</Link>
+              <Link to="/properties">
+                Browse Properties
+              </Link>
             </Button>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
