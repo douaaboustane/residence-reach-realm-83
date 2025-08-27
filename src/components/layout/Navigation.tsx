@@ -21,7 +21,8 @@ import {
   Globe,
   User,
   Shield,
-  BarChart3
+  BarChart3,
+  Calculator
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -51,17 +52,20 @@ const Navigation: React.FC = () => {
       case 'buyer':
         return [
           ...baseLinks,
-          { href: '/properties', label: t('nav.properties'), icon: Building2 }
+          { href: '/properties', label: t('nav.properties'), icon: Building2 },
+          { href: '/estimate', label: 'Estimate', icon: Calculator }
         ];
       case 'investigator':
         return [
           ...baseLinks,
-          { href: '/investigations', label: t('nav.investigations'), icon: Search }
+          { href: '/investigations', label: t('nav.investigations'), icon: Search },
+          { href: '/estimate', label: 'Estimate', icon: Calculator }
         ];
       case 'admin':
         return [
           ...baseLinks,
-          { href: '/admin', label: t('nav.admin'), icon: BarChart3 }
+          { href: '/admin', label: t('nav.admin'), icon: BarChart3 },
+          { href: '/estimate', label: 'Estimate', icon: Calculator }
         ];
       default:
         return baseLinks;
@@ -158,9 +162,11 @@ const Navigation: React.FC = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem className="flex items-center space-x-2">
-                    <Settings className="h-4 w-4" />
-                    <span>Settings</span>
+                  <DropdownMenuItem asChild className="flex items-center space-x-2 cursor-pointer">
+                    <Link to="/settings">
+                      <Settings className="h-4 w-4" />
+                      <span>Settings</span>
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem 
                     onClick={handleLogout}

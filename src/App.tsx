@@ -13,6 +13,8 @@ import Signup from "./pages/auth/Signup";
 import Properties from "./pages/buyer/Properties";
 import Investigations from "./pages/investigator/Investigations";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import Estimate from "./pages/Estimate";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import "./lib/i18n";
 
@@ -44,6 +46,16 @@ const App = () => (
                 <Route path="/admin" element={
                   <ProtectedRoute allowedRoles={['admin']}>
                     <AdminDashboard />
+                  </ProtectedRoute>
+                } />
+                <Route path="/estimate" element={
+                  <ProtectedRoute allowedRoles={['buyer', 'investigator', 'admin']}>
+                    <Estimate />
+                  </ProtectedRoute>
+                } />
+                <Route path="/settings" element={
+                  <ProtectedRoute allowedRoles={['buyer', 'investigator', 'admin']}>
+                    <Settings />
                   </ProtectedRoute>
                 } />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

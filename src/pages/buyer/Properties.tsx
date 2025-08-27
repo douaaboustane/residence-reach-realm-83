@@ -25,7 +25,7 @@ import LocationMap3D from '@/components/3d/LocationMap3D';
 export default function Properties() {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favorites, setFavorites] = useState<string[]>([]);
   const [selectedProperty, setSelectedProperty] = useState(mockProperties[0]);
 
   const filteredProperties = mockProperties.filter(property =>
@@ -33,7 +33,7 @@ export default function Properties() {
     property.location.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const toggleFavorite = (id: number) => {
+  const toggleFavorite = (id: string) => {
     setFavorites(prev => 
       prev.includes(id) 
         ? prev.filter(fav => fav !== id)
