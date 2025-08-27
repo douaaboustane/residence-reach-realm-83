@@ -46,13 +46,53 @@ const Estimate: React.FC = () => {
     },
   });
 
-  const onSubmit = (data: EstimateFormData) => {
-    console.log('Estimate form submitted:', data);
-    toast({
-      title: "Estimate Request Submitted",
-      description: "We'll process your request and get back to you within 24 hours.",
-    });
-    form.reset();
+  const onSubmit = async (data: EstimateFormData) => {
+    try {
+      // Simulate API call with loading state
+      console.log('Estimate form submitted:', data);
+      
+      // Show loading toast
+      toast({
+        title: "Processing Request...",
+        description: "Please wait while we process your estimate request.",
+      });
+
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Calculate a mock estimate based on form data
+      const basePrice = 500000;
+      const sizeMultiplier = parseInt(data.size) * 200;
+      const bedroomMultiplier = parseInt(data.bedrooms) * 25000;
+      const bathroomMultiplier = parseFloat(data.bathrooms) * 15000;
+      
+      const conditionMultipliers = {
+        'excellent': 1.2,
+        'good': 1.0,
+        'fair': 0.8,
+        'needs-renovation': 0.6
+      };
+      
+      const estimatedValue = Math.round(
+        (basePrice + sizeMultiplier + bedroomMultiplier + bathroomMultiplier) * 
+        conditionMultipliers[data.condition as keyof typeof conditionMultipliers]
+      );
+
+      // Show success with estimated value
+      toast({
+        title: "Estimate Ready!",
+        description: `Estimated ${data.estimationType.replace('-', ' ')}: $${estimatedValue.toLocaleString()}. A detailed report will be sent to your email.`,
+      });
+      
+      // Reset form after successful submission
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error processing your request. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
