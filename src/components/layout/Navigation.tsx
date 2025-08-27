@@ -81,7 +81,7 @@ const Navigation: React.FC = () => {
 
           {/* Company Name */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-xl font-bold text-foreground">PropertyEval</h1>
+            <h1 className="text-xl font-bold text-foreground text-left">OpenHome</h1>
           </div>
 
           {/* Navigation Links */}
