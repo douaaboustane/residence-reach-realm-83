@@ -142,9 +142,9 @@ const Investigations: React.FC = () => {
               <Button 
                 size="sm" 
                 onClick={() => handleStartInvestigation(investigation)}
-                className="flex-1 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl bg-gradient-to-r from-primary to-primary-glow"
+                className="flex-1 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl text-black bg-white hover:bg-gray-100"
               >
-                <Search className="h-4 w-4 mr-2 animate-pulse" />
+                <Search className="h-4 w-4 mr-2 animate-pulse text-black" />
                 {t('investigator.startInvestigation')}
               </Button>
             )}

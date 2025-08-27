@@ -158,8 +158,8 @@ export default function Properties() {
                 </CardContent>
                 
                 <CardFooter className="p-6 pt-0 flex gap-2">
-                  <Button className="flex-1">
-                    <Eye className="w-4 h-4 mr-2" />
+                  <Button className="flex-1 text-black bg-white hover:bg-gray-100">
+                    <Eye className="w-4 h-4 mr-2 text-black" />
                     {t('properties.viewDetails', 'View Details')}
                   </Button>
                   <Button variant="outline" size="icon">
