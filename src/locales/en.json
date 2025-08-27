@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "investigations": "Investigations",
+    "admin": "Admin",
+    "login": "Login",
+    "logout": "Logout",
+    "signup": "Sign Up"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "role": "Role",
+    "selectRole": "Select your role",
+    "buyer": "Buyer",
+    "investigator": "Investigator",
+    "admin": "Admin",
+    "loginButton": "Login",
+    "signupButton": "Create Account",
+    "switchToLogin": "Already have an account? Login",
+    "switchToSignup": "Don't have an account? Sign up",
+    "loginSuccess": "Welcome back!",
+    "signupSuccess": "Account created successfully!",
+    "loginError": "Invalid credentials",
+    "signupError": "Failed to create account"
+  },
+  "home": {
+    "hero": {
+      "title": "Find Your Perfect Home",
+      "subtitle": "Discover verified properties with professional investigation services",
+      "ctaBuyer": "Browse Properties",
+      "ctaInvestigator": "Start Investigating"
+    },
+    "features": {
+      "title": "Why Choose OpenHome?",
+      "verification": {
+        "title": "Property Verification",
+        "description": "Professional investigation services ensure property authenticity"
+      },
+      "trusted": {
+        "title": "Trusted Platform",
+        "description": "Verified buyers, sellers, and investigators in one secure platform"
+      },
+      "analytics": {
+        "title": "Market Analytics",
+        "description": "Data-driven insights for better property investment decisions"
+      }
+    }
+  },
+  "buyer": {
+    "title": "Property Listings",
+    "searchPlaceholder": "Search properties...",
+    "filters": "Filters",
+    "priceRange": "Price Range",
+    "propertyType": "Property Type",
+    "location": "Location",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "viewDetails": "View Details",
+    "requestInvestigation": "Request Investigation",
+    "noProperties": "No properties found",
+    "propertyDetails": "Property Details"
+  },
+  "investigator": {
+    "title": "Investigation Dashboard",
+    "pendingInvestigations": "Pending Investigations",
+    "completedInvestigations": "Completed Investigations",
+    "startInvestigation": "Start Investigation",
+    "completeInvestigation": "Complete Investigation",
+    "investigationReport": "Investigation Report",
+    "verificationStatus": "Verification Status",
+    "verified": "Verified",
+    "pending": "Pending",
+    "rejected": "Rejected"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "overview": "Overview",
+    "users": "Users",
+    "properties": "Properties",
+    "investigations": "Investigations",
+    "analytics": "Analytics",
+    "totalUsers": "Total Users",
+    "totalProperties": "Total Properties",
+    "pendingInvestigations": "Pending Investigations",
+    "monthlyRevenue": "Monthly Revenue",
+    "userManagement": "User Management",
+    "propertyApprovals": "Property Approvals",
+    "systemHealth": "System Health"
+  },
+  "common": {
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "price": "Price",
+    "location": "Location",
+    "type": "Type",
+    "status": "Status",
+    "date": "Date"
+  }
+}

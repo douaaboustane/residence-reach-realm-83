@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "properties": "العقارات",
+    "investigations": "التحقيقات",
+    "admin": "الإدارة",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "signup": "إنشاء حساب"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "role": "الدور",
+    "selectRole": "اختر دورك",
+    "buyer": "مشتري",
+    "investigator": "محقق",
+    "admin": "مدير",
+    "loginButton": "تسجيل الدخول",
+    "signupButton": "إنشاء حساب",
+    "switchToLogin": "لديك حساب بالفعل؟ سجل دخولك",
+    "switchToSignup": "ليس لديك حساب؟ أنشئ حساباً",
+    "loginSuccess": "أهلاً بعودتك!",
+    "signupSuccess": "تم إنشاء الحساب بنجاح!",
+    "loginError": "بيانات اعتماد غير صحيحة",
+    "signupError": "فشل في إنشاء الحساب"
+  },
+  "home": {
+    "hero": {
+      "title": "اعثر على منزل أحلامك",
+      "subtitle": "اكتشف العقارات المُتحقق منها مع خدمات التحقيق المهنية",
+      "ctaBuyer": "تصفح العقارات",
+      "ctaInvestigator": "ابدأ التحقيق"
+    },
+    "features": {
+      "title": "لماذا تختار OpenHome؟",
+      "verification": {
+        "title": "التحقق من العقار",
+        "description": "خدمات التحقيق المهنية تضمن صحة العقار"
+      },
+      "trusted": {
+        "title": "منصة موثوقة",
+        "description": "مشترون وبائعون ومحققون مُتحقق منهم في منصة آمنة واحدة"
+      },
+      "analytics": {
+        "title": "تحليلات السوق",
+        "description": "رؤى مبنية على البيانات لقرارات استثمار عقاري أفضل"
+      }
+    }
+  },
+  "buyer": {
+    "title": "قوائم العقارات",
+    "searchPlaceholder": "البحث عن العقارات...",
+    "filters": "المرشحات",
+    "priceRange": "نطاق السعر",
+    "propertyType": "نوع العقار",
+    "location": "الموقع",
+    "bedrooms": "غرف النوم",
+    "bathrooms": "الحمامات",
+    "viewDetails": "عرض التفاصيل",
+    "requestInvestigation": "طلب تحقيق",
+    "noProperties": "لم يتم العثور على عقارات",
+    "propertyDetails": "تفاصيل العقار"
+  },
+  "investigator": {
+    "title": "لوحة تحكم المحقق",
+    "pendingInvestigations": "التحقيقات المعلقة",
+    "completedInvestigations": "التحقيقات المكتملة",
+    "startInvestigation": "بدء التحقيق",
+    "completeInvestigation": "إكمال التحقيق",
+    "investigationReport": "تقرير التحقيق",
+    "verificationStatus": "حالة التحقق",
+    "verified": "مُتحقق منه",
+    "pending": "معلق",
+    "rejected": "مرفوض"
+  },
+  "admin": {
+    "title": "لوحة تحكم الإدارة",
+    "overview": "نظرة عامة",
+    "users": "المستخدمون",
+    "properties": "العقارات",
+    "investigations": "التحقيقات",
+    "analytics": "التحليلات",
+    "totalUsers": "إجمالي المستخدمين",
+    "totalProperties": "إجمالي العقارات",
+    "pendingInvestigations": "التحقيقات المعلقة",
+    "monthlyRevenue": "الإيرادات الشهرية",
+    "userManagement": "إدارة المستخدمين",
+    "propertyApprovals": "موافقات العقارات",
+    "systemHealth": "صحة النظام"
+  },
+  "common": {
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "نجح!",
+    "price": "السعر",
+    "location": "الموقع",
+    "type": "النوع",
+    "status": "الحالة",
+    "date": "التاريخ"
+  }
+}

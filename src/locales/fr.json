@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "properties": "Propriétés",
+    "investigations": "Enquêtes",
+    "admin": "Admin",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "signup": "S'inscrire"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "role": "Rôle",
+    "selectRole": "Sélectionnez votre rôle",
+    "buyer": "Acheteur",
+    "investigator": "Enquêteur",
+    "admin": "Administrateur",
+    "loginButton": "Se connecter",
+    "signupButton": "Créer un compte",
+    "switchToLogin": "Vous avez déjà un compte? Connectez-vous",
+    "switchToSignup": "Vous n'avez pas de compte? Inscrivez-vous",
+    "loginSuccess": "Bon retour!",
+    "signupSuccess": "Compte créé avec succès!",
+    "loginError": "Identifiants invalides",
+    "signupError": "Échec de la création du compte"
+  },
+  "home": {
+    "hero": {
+      "title": "Trouvez Votre Maison Parfaite",
+      "subtitle": "Découvrez des propriétés vérifiées avec des services d'enquête professionnels",
+      "ctaBuyer": "Parcourir les Propriétés",
+      "ctaInvestigator": "Commencer l'Enquête"
+    },
+    "features": {
+      "title": "Pourquoi Choisir OpenHome?",
+      "verification": {
+        "title": "Vérification de Propriété",
+        "description": "Services d'enquête professionnels garantissent l'authenticité des propriétés"
+      },
+      "trusted": {
+        "title": "Plateforme de Confiance",
+        "description": "Acheteurs, vendeurs et enquêteurs vérifiés sur une plateforme sécurisée"
+      },
+      "analytics": {
+        "title": "Analyses de Marché",
+        "description": "Insights basés sur les données pour de meilleures décisions d'investissement"
+      }
+    }
+  },
+  "buyer": {
+    "title": "Annonces Immobilières",
+    "searchPlaceholder": "Rechercher des propriétés...",
+    "filters": "Filtres",
+    "priceRange": "Gamme de Prix",
+    "propertyType": "Type de Propriété",
+    "location": "Emplacement",
+    "bedrooms": "Chambres",
+    "bathrooms": "Salles de Bain",
+    "viewDetails": "Voir les Détails",
+    "requestInvestigation": "Demander une Enquête",
+    "noProperties": "Aucune propriété trouvée",
+    "propertyDetails": "Détails de la Propriété"
+  },
+  "investigator": {
+    "title": "Tableau de Bord Enquêteur",
+    "pendingInvestigations": "Enquêtes en Cours",
+    "completedInvestigations": "Enquêtes Terminées",
+    "startInvestigation": "Commencer l'Enquête",
+    "completeInvestigation": "Terminer l'Enquête",
+    "investigationReport": "Rapport d'Enquête",
+    "verificationStatus": "Statut de Vérification",
+    "verified": "Vérifié",
+    "pending": "En Attente",
+    "rejected": "Rejeté"
+  },
+  "admin": {
+    "title": "Tableau de Bord Admin",
+    "overview": "Vue d'Ensemble",
+    "users": "Utilisateurs",
+    "properties": "Propriétés",
+    "investigations": "Enquêtes",
+    "analytics": "Analyses",
+    "totalUsers": "Total Utilisateurs",
+    "totalProperties": "Total Propriétés",
+    "pendingInvestigations": "Enquêtes en Attente",
+    "monthlyRevenue": "Revenus Mensuels",
+    "userManagement": "Gestion des Utilisateurs",
+    "propertyApprovals": "Approbations de Propriétés",
+    "systemHealth": "Santé du Système"
+  },
+  "common": {
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès!",
+    "price": "Prix",
+    "location": "Emplacement",
+    "type": "Type",
+    "status": "Statut",
+    "date": "Date"
+  }
+}
