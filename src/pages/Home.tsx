@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="flex justify-center mb-8">
               <div className="h-16 w-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/30 hover-scale">
-                <Building2 className="h-8 w-8 text-white" />
+                <img src="/lovable-uploads/9a6a617b-cc6f-4279-81b0-7f0f371138d8.png" alt="OpenHome Logo" className="h-8 w-8" />
               </div>
             </div>
             
