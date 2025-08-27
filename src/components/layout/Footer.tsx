@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2024 PropertyEval. All rights reserved.</p>
+          <p>© 2024 OpenHouse. All rights reserved.</p>
         </div>
       </div>
     </footer>;
