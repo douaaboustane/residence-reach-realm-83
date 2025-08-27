@@ -24,12 +24,24 @@ const Home: React.FC = () => {
   }, [backgrounds.length]);
   return <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="absolute inset-0">
-          {backgrounds.map((bg, index) => <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentBg ? 'opacity-100' : 'opacity-0'}`}>
-              <img src={bg} alt="Luxury real estate background" className="w-full h-full object-cover animate-fade-in" />
-            </div>)}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-accent/80" />
+          {backgrounds.map((bg, index) => (
+            <div 
+              key={index} 
+              className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
+                index === currentBg ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+              }`}
+            >
+              <img 
+                src={bg} 
+                alt="Luxury real estate background" 
+                className="w-full h-full object-cover animate-fade-in" 
+              />
+            </div>
+          ))}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
