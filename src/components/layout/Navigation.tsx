@@ -76,13 +76,8 @@ const Navigation: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/903c5086-f6a7-42aa-a254-a6621d3600bf.png" alt="Logo" className="h-8 w-8" />
+            <img src="/lovable-uploads/5b4f5590-1328-4a6c-b8b8-945a29dcfc1d.png" alt="PropertyEval Logo" className="h-8 w-8" />
           </Link>
-
-          {/* Company Name */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-xl font-bold text-foreground">PropertyEval</h1>
-          </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
@@ -94,6 +89,10 @@ const Navigation: React.FC = () => {
                   <span>{link.label}</span>
                 </Link>;
           })}
+            {/* Company Name */}
+            <div className="flex items-center ml-4">
+              <h1 className="text-xl font-bold text-foreground">OpenHome</h1>
+            </div>
           </div>
 
           {/* User Actions */}
