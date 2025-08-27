@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/903c5086-f6a7-42aa-a254-a6621d3600bf.png" alt="Logo" className="h-8 w-8" />
+            <img src="/lovable-uploads/5b4f5590-1328-4a6c-b8b8-945a29dcfc1d.png" alt="PropertyEval Logo" className="h-8 w-8" />
           </Link>
 
           {/* Navigation Links */}
