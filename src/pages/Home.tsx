@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="flex justify-center mb-8">
               <div className="h-16 w-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border border-white/30 hover-scale">
-                
+                <img src="/lovable-uploads/87236b74-c272-44b3-b146-c550d4ae17f1.png" alt="Company Logo" className="h-10 w-10" />
               </div>
             </div>
             
