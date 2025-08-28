@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              OpenHome au Milieu
+             
             </h1>
             
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
