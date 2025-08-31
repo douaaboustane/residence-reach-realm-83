@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-export type UserRole = 'buyer' | 'investigator' | 'admin';
+export type UserRole = 'buyer' | 'investor' | 'admin';
 
 export interface User {
   id: string;
@@ -27,10 +27,10 @@ const demoUsers: Record<string, User> = {
     role: 'buyer',
     name: 'John Doe'
   },
-  'investigator@demo.com': {
+  'investor@demo.com': {
     id: '2',
-    email: 'investigator@demo.com',
-    role: 'investigator',
+    email: 'investor@demo.com',
+    role: 'investor',
     name: 'Jane Smith'
   },
   'admin@demo.com': {

@@ -38,18 +38,18 @@ const Navigation: React.FC = () => {
     switch (user.role) {
       case 'buyer':
         return [...baseLinks, {
-          href: '/properties',
-          label: t('nav.properties'),
+          href: '/buyer-dashboard',
+          label: 'Properties',
           icon: Building2
         }, {
           href: '/estimate',
           label: 'Estimate',
           icon: Calculator
         }];
-      case 'investigator':
+      case 'investor':
         return [...baseLinks, {
-          href: '/investigations',
-          label: t('nav.investigations'),
+          href: '/investor-dashboard',
+          label: 'Investments',
           icon: Search
         }, {
           href: '/estimate',
@@ -127,7 +127,7 @@ const Navigation: React.FC = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="sm" className="flex items-center space-x-2">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center">
-                      {user.role === 'admin' ? <Shield className="h-4 w-4 text-primary" /> : user.role === 'investigator' ? <Search className="h-4 w-4 text-primary" /> : <User className="h-4 w-4 text-primary" />}
+                      {user.role === 'admin' ? <Shield className="h-4 w-4 text-primary" /> : user.role === 'investor' ? <Search className="h-4 w-4 text-primary" /> : <User className="h-4 w-4 text-primary" />}
                     </div>
                     <span className="hidden sm:block text-sm font-medium">{user.name}</span>
                   </Button>

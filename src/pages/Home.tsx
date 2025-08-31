@@ -63,16 +63,16 @@ const Home: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 shadow-lg hover-scale">
-                <Link to="/properties" className="flex items-center space-x-2">
-                  <span>{t('home.hero.ctaBuyer')}</span>
+                <Link to="/buyer-dashboard" className="flex items-center space-x-2">
+                  <span>Browse Properties</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               
               <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm hover-scale">
-                <Link to="/investigations" className="flex items-center space-x-2">
+                <Link to="/investor-dashboard" className="flex items-center space-x-2">
                   <Shield className="h-4 w-4" />
-                  <span>{t('home.hero.ctaInvestigator')}</span>
+                  <span>Start Investing</span>
                 </Link>
               </Button>
               
@@ -183,7 +183,7 @@ const Home: React.FC = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Link to="/properties">
+              <Link to="/buyer-dashboard">
                 Browse Properties
               </Link>
             </Button>

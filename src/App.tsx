@@ -10,8 +10,8 @@ import ProtectedRoute from "@/components/auth/ProtectedRoute";
 import Home from "./pages/Home";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
-import Properties from "./pages/buyer/Properties";
-import Investigations from "./pages/investigator/Investigations";
+import BuyerDashboard from "./pages/buyer/BuyerDashboard";
+import InvestorDashboard from "./pages/investor/InvestorDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import Estimate from "./pages/Estimate";
 import Settings from "./pages/Settings";
@@ -33,14 +33,14 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/properties" element={
+                <Route path="/buyer-dashboard" element={
                   <ProtectedRoute allowedRoles={['buyer']}>
-                    <Properties />
+                    <BuyerDashboard />
                   </ProtectedRoute>
                 } />
-                <Route path="/investigations" element={
-                  <ProtectedRoute allowedRoles={['investigator']}>
-                    <Investigations />
+                <Route path="/investor-dashboard" element={
+                  <ProtectedRoute allowedRoles={['investor']}>
+                    <InvestorDashboard />
                   </ProtectedRoute>
                 } />
                 <Route path="/admin" element={
@@ -49,12 +49,12 @@ const App = () => (
                   </ProtectedRoute>
                 } />
                 <Route path="/estimate" element={
-                  <ProtectedRoute allowedRoles={['buyer', 'investigator', 'admin']}>
+                  <ProtectedRoute allowedRoles={['buyer', 'investor', 'admin']}>
                     <Estimate />
                   </ProtectedRoute>
                 } />
                 <Route path="/settings" element={
-                  <ProtectedRoute allowedRoles={['buyer', 'investigator', 'admin']}>
+                  <ProtectedRoute allowedRoles={['buyer', 'investor', 'admin']}>
                     <Settings />
                   </ProtectedRoute>
                 } />

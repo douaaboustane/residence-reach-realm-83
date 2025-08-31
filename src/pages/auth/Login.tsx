@@ -49,10 +49,10 @@ const Login: React.FC = () => {
       // Navigate based on role
       if (formData.role === 'admin') {
         navigate('/admin');
-      } else if (formData.role === 'investigator') {
-        navigate('/investigations');
+      } else if (formData.role === 'investor') {
+        navigate('/investor-dashboard');
       } else if (formData.role === 'buyer') {
-        navigate('/properties');
+        navigate('/buyer-dashboard');
       } else {
         navigate(from, { replace: true });
       }
@@ -137,7 +137,7 @@ const Login: React.FC = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="buyer">{t('auth.buyer')}</SelectItem>
-                  <SelectItem value="investigator">{t('auth.investigator')}</SelectItem>
+                  <SelectItem value="investor">Investor</SelectItem>
                   <SelectItem value="admin">{t('auth.admin')}</SelectItem>
                 </SelectContent>
               </Select>
@@ -169,10 +169,10 @@ const Login: React.FC = () => {
               <Button 
                 variant="outline" 
                 size="sm" 
-                onClick={() => handleDemoLogin('investigator')}
+                onClick={() => handleDemoLogin('investor')}
                 className="text-xs"
               >
-                Investigator
+                Investor
               </Button>
               <Button 
                 variant="outline" 

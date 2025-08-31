@@ -22,11 +22,12 @@ import { mockProperties } from '@/data/mockData';
 import Property3D from '@/components/3d/Property3D';
 import LocationMap3D from '@/components/3d/LocationMap3D';
 
-export default function Properties() {
+export default function BuyerDashboard() {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [favorites, setFavorites] = useState<string[]>([]);
   const [selectedProperty, setSelectedProperty] = useState(mockProperties[0]);
+  const [activeTab, setActiveTab] = useState('buy');
 
   const filteredProperties = mockProperties.filter(property =>
     property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -46,11 +47,37 @@ export default function Properties() {
       {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          {t('properties.title', 'Find Your Dream Property')}
+          Buyer Dashboard
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {t('properties.subtitle', 'Discover verified properties with detailed investigations and transparent pricing')}
+          Find your perfect home - whether to buy or rent
         </p>
+      </div>
+
+      {/* Buy/Rent Toggle */}
+      <div className="flex justify-center">
+        <div className="inline-flex rounded-lg bg-muted p-1">
+          <button 
+            onClick={() => setActiveTab('buy')}
+            className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
+              activeTab === 'buy' 
+                ? 'bg-background text-foreground shadow-sm' 
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Buy Properties
+          </button>
+          <button 
+            onClick={() => setActiveTab('rent')}
+            className={`px-6 py-2 rounded-md text-sm font-medium transition-all ${
+              activeTab === 'rent' 
+                ? 'bg-background text-foreground shadow-sm' 
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Rent Properties
+          </button>
+        </div>
       </div>
 
       {/* Search and Filters */}
